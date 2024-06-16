@@ -12,7 +12,7 @@ class Cashier:
                 half_dollar = int(input("How many half dollars?: "))
                 quarter = int(input("How many quarters?: "))
                 nickel = int(input("How many nickels?: "))
-                if (dollar < 0 or half_dollar < 0 or quarter < 0 or nickel < 0):
+                if dollar < 0 or half_dollar < 0 or quarter < 0 or nickel < 0:
                     raise ValueError("Negatives not allowed")
                 break
             except ValueError as e:
@@ -26,7 +26,7 @@ class Cashier:
         """Return True when the payment is accepted, or False if money is insufficient.
            Hint: use the output of process_coins() function for cost input"""
         ##
-        if (coins < cost):
+        if coins < cost:
             #Print insufficient fund
             print("Insufficient funds.")
             return False
